@@ -1,0 +1,9 @@
+scipy
+Pillow
+imutils
+numpy
+pygame
+opencv-python
+opencv-contrib-python
+cmake
+dlib
