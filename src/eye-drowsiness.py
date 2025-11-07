@@ -3,7 +3,6 @@ from scipy.spatial import distance
 from PIL import Image, ImageTk
 from imutils import face_utils
 import tkinter as tk
-import numpy as np
 import pygame
 import dlib
 import cv2
@@ -78,9 +77,9 @@ if __name__ == "__main__":
     EYE_FRAMES = 15 
     COUNTER = 0; 
     pygame.mixer.init() #Initialize Pygame and load music 
-    pygame.mixer.music.load('alarm.mp3') 
+    pygame.mixer.music.load('asset/alarm.mp3') 
     detector = dlib.get_frontal_face_detector()#the detector and predictor functions 
-    predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat') 
+    predictor = dlib.shape_predictor('asset/shape_predictor_68_face_landmarks.dat') 
     (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS['left_eye'] 
     (rStart, rEnd) = face_utils.FACIAL_LANDMARKS_IDXS['right_eye'] 
     cam = cv2.VideoCapture(0) 

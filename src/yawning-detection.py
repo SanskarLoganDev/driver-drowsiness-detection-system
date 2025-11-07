@@ -4,7 +4,7 @@ import dlib
 import numpy as np
 
 #Detector and Predictor 
-PREDICTOR_PATH = "shape_predictor_68_face_landmarks.dat" 
+PREDICTOR_PATH = "asset/shape_predictor_68_face_landmarks.dat" 
 predictor = dlib.shape_predictor(PREDICTOR_PATH) 
 detector = dlib.get_frontal_face_detector() 
 
@@ -88,7 +88,8 @@ while True:
     cv2.imshow('Live Landmarks', image_landmarks ) 
     cv2.imshow('Yawn Detection', frame ) 
 
-    if cv2.waitKey(1) == 13: #13 is the Enter Key, therefore press the enter key to exit 
+    key = cv2.waitKey(1)
+    if key == ord('q') or key == 27: # 'q' or Escape key to exit
         break 
  
 cap.release() 
