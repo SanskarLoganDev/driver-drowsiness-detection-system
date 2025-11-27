@@ -7,3 +7,6 @@ opencv-python
 opencv-contrib-python
 cmake
 dlib
+coverage
+pytest
+pytest-cov
